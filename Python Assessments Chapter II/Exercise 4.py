@@ -8,4 +8,10 @@ from tkinter import *
 
 main = Tk()
 
+Banner = PhotoImage(file='Images/RAK Bathspa.jpg')
+main.iconphoto(True,Banner)
+
+Banner.pack()
+
+main.resizable(True,True)
 main.mainloop()
