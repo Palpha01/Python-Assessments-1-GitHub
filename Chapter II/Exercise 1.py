@@ -11,7 +11,7 @@ main = Tk()
 main.title('Exercise 1')
 main.geometry('500x200')
 
-message=Label(main,text="Welcome to Tkinter", bg='skyblue', width=20, height=30, font=('Times New Roman',20,'bold'))
+message=Label(main,text="Welcome to Tkinter", bg='skyblue', width=20, height=30, font=('Times',20,'bold'))
 message.pack()
 
 main.configure(bg='dodgerblue')

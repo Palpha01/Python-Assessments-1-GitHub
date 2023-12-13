@@ -24,26 +24,26 @@ def get_age():
     
 main = Tk()
 main.geometry("400x300")
-main.config(bg="#F7DC6F")
+main.config(bg="navyblue")
 main.resizable(True,True)
 main.title('Bonus B')
 
-l1 = Label(main,text="The Age Calculator!",font=("Arial", 20),fg="black",bg="#F7DC6F")
-l2 = Label(main,font=("Arial",12),text="Enter your birthday which includes the day-month-year.",fg="black",bg="#F7DC6F")
+l1 = Label(main,text="The Age Calculator",font=('Helvetica', 20),fg="skyblue",bg="navyblue")
+l2 = Label(main,font=('Helvetica',12),text="Please designate your birthday",fg="skyblue",bg="navyblue")
 
-day = Label(main,text="Date: ",font=('Arial',12,"bold"),fg="darkgreen",bg="#F7DC6F")
-month = Label(main,text="Month: ",font=('Arial',12,"bold"),fg="darkgreen",bg="#F7DC6F")
-year = Label(main,text="Year: ",font=('Arial',12,"bold"),fg="darkgreen",bg="#F7DC6F")
+day = Label(main,text="Date: ",font=('Helvetica',12,'bold'),fg="skyblue",bg="navyblue")
+month = Label(main,text="Month: ",font=('Helvetica',12,'bold'),fg="skyblue",bg="navyblue")
+year = Label(main,text="Year: ",font=('Helvetica',12,'bold'),fg="skyblue",bg="navyblue")
 e1 = Entry(main,width=5)
 e2 = Entry(main,width=5)
 e3 = Entry(main,width=5)
 
-b1 = Button(main,text="Calculate Age!",font=("Arial",13),command=get_age)
+b1 = Button(main,text="Calculate",font=('Helvetica',13),command=get_age)
 
-l3 = Label(main,text="The Calculated Age is: ",font=('Arial',12,"bold"),fg="darkgreen",bg="#F7DC6F")
+l3 = Label(main,text="Your current age is: ",font=('Helvetica',12,'bold'),fg="skyblue",bg="navyblue")
 t1 = Text(main,width=5,height=0,state="disabled")
 
-b2 = Button(main,text="Exit Application!",font=("Arial",13),command=exit)
+b2 = Button(main,text="Leave",font=('Helvetica',13),command=exit)
 
 l1.place(x=70,y=5)
 l2.place(x=10,y=40)
