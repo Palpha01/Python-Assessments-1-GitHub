@@ -11,10 +11,10 @@ main = Tk()
 
 main.title('Exercise 2 a')
 
-Button(main, text="A", bg='red', relief=GROOVE, bd=5).pack(side=TOP, expand=YES, fill=X)
-Button(main, text="B", bg='yellow', padx=50).pack(side=BOTTOM, expand=2, anchor=S)
-Button(main, text="C", bg='blue',  padx=50, relief=FLAT).pack(side=LEFT, expand=2, anchor=SE)
-Button(main, text="D", bg='white', relief=FLAT, padx=50).pack(side=RIGHT, expand=2, anchor=S)
+Label(main, text="A", width=12, bg='red', relief=GROOVE, bd=5).pack(side=TOP, expand=1, fill=X)
+Label(main, text="B", width=12, bg='yellow').pack(side=BOTTOM)
+Label(main, text="C", width=12, bg='blue').pack(side=LEFT, expand=1, fill=Y)
+Label(main, text="D", width=12, bg='white').pack(side=RIGHT)
 
 main.resizable(True,True)
 main.mainloop()
