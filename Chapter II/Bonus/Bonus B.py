@@ -7,6 +7,7 @@ import tkinter
 from tkinter import *
 
 from datetime import date
+
 today = date.today()
 
 def exit():
