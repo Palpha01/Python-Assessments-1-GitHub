@@ -12,7 +12,7 @@ main = Tk()
 main.title('Exercise 2')
 main.geometry('500x500')
 
-header = Label(main,text="Coffee Vending Machine",font=("Helvetica", 10, "bold"),width=50,bg='peruvian',bd=10,fg='white',relief=RAISED)
+header = Label(main,text="Coffee Vending Machine",font=("Helvetica", 10, "bold"),width=60,bg='brown',bd=10,fg='white',relief=RAISED)
 header.grid(row=0,column=0)
 
 main.mainloop()
