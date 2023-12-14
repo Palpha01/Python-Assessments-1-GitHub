@@ -14,6 +14,9 @@ main.geometry('500x700')
 
 main.resizable(True,True)
 
+img = PhotoImage(file='RAK Bathspa.png')
+Label (image=img).pack()
+
 h1 = Label(main, text="Student Management System").pack()
 h2 = Label(main, text="New Student Registration").pack()
 
