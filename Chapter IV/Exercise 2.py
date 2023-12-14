@@ -13,7 +13,7 @@ from tkinter import *
 
 def count_occurences():
     string = entry.get()
-    with open('sentences.txt', 'r') as file:
+    with open("Sentences.txt", 'r') as file:
         content = file.read()
         count = content.count(string)
         result.config(text="The string " + string + " appears " + count + " times.")
