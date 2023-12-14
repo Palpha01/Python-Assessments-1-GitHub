@@ -13,7 +13,7 @@ main = Tk()
 def update_greeting():
     name = name_entry.get()
     color = colovar.get()
-    greeting_label.config(text="Hello,{name}",fg=color)
+    greeting_label.config(text="Hello " + name + "!",fg=color)
 
 main.title('Exercise 1')
 main.geometry('500x500')
