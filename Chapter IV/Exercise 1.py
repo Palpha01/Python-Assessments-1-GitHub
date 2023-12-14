@@ -31,7 +31,7 @@ hometown = Label(bio,text="Hometown:").grid(row=3,column=0,padx=5)
 hometown_entry = Entry(bio,width=30).grid(row=3,column=1)
 
 def onClick():
-    tkinter.messagebox.showinfo("")
+    tkinter.messagebox.showinfo()
 
 button = Button(bio, text="Read", command=onClick, height=1, width=5)
 button.grid(row=4,column=1)
