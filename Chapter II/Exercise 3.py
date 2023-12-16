@@ -8,15 +8,24 @@ from tkinter import *
 
 main = Tk()
 
-NL = Label(main,text="First name: ").grid(row=0,column=0)
-NE = Entry(main).grid(row=0, column=1)
+main.title('Exercise 3')
 
-SL = Label(main,text="Surname: ").grid(row=1,column=0)
-SE = Entry(main).grid(row=1, column=1)
+NL = Label(main,text="First name: ")
+NE = Entry(main)
+NL.grid(row=0,column=0)
+NE.grid(row=0,column=1)
 
-EL = Label(main,text="Email: ").grid(row=2,column=0)
-EE = Entry(main).grid(row=2, column=1)
+SL = Label(main,text="Surname: ")
+SE = Entry(main)
+SL.grid(row=1, column=0)
+SE.grid(row=1, column=1)
 
-Submit = Button(main,text="Submit"). grid()
+EL = Label(main,text="Email: ")
+EE = Entry(main)
+EL.grid(row=2,column=0)
+EE.grid(row=2, column=1)
+
+Submit = Button(main,text="Submit")
+Submit.grid(columnspan=5)
 
 main.mainloop()
