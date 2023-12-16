@@ -11,15 +11,21 @@ main = Tk()
 
 main.title('Exercise 2 b')
 
-Frame1 = Frame(main,border=5,relief="solid").pack(side=LEFT,expand=FALSE,fill="both")
+Frame1 = Frame(main,border=5,relief="solid")
+Frame1.pack(side=LEFT,expand=TRUE,fill="both")
 
-A = Label(Frame1,text="A",bg="#22263d",fg="white").pack(side=TOP,expand=TRUE,fill="both")
-B = Label(Frame1,text="B",bg="white",fg="#22263d").pack(side=BOTTOM,expand=TRUE,fill="both")
+A = Label(Frame1,text="A",bg="#22263d",fg="white")
+B = Label(Frame1,text="B",bg="white",fg="#22263d")
+A.pack(side=TOP,expand=TRUE,fill="both")
+B.pack(side=BOTTOM,expand=TRUE,fill="both")
 
-Frame2 = Frame(main,border=5,relief="solid").pack(side=RIGHT,expand=FALSE,fill="both")
+Frame2 = Frame(main,border=5,relief="solid")
+Frame2.pack(side=RIGHT,expand=TRUE,fill="both")
 
-C = Label(Frame2,text="C",bg="white",fg="#22263d").pack(side=TOP,expand=TRUE,fill="both")
-D = Label(Frame2,text="D",bg="#22263d",fg="white").pack(side=BOTTOM,expand=TRUE,fill="both")
+C = Label(Frame2,text="C",bg="white",fg="#22263d")
+D = Label(Frame2,text="D",bg="#22263d",fg="white")
+C.pack(side=TOP,expand=TRUE,fill="both")
+D.pack(side=BOTTOM,expand=TRUE,fill="both")
 
 main.resizable(True,True)
 main.mainloop()
