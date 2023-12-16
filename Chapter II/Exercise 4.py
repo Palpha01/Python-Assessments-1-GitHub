@@ -3,25 +3,18 @@
 # Use widgets to create a GUI
 
 import tkinter
-
 from tkinter import *
-
-from PIL import Image
-
+from PIL import Image, ImageTk
 import os
 
 main = Tk()
+main.title("Exercise 4")
 
-main.title('Exercise 4')
+Banner = ImageTk.PhotoImage(Image.open("Python-Assessments-1-GitHub/Chapter II/RAK_Bathspa.jpg"))
 
-main.geometry('500x700')
+Heading = Label(main,image=Banner)
+Heading.pack(side=TOP,fill=BOTH,expand=NO)
 
-main.resizable(True,True)
+main.geometry("400x600")
 
-Banner = PhotoImage(file="RAK Bathspa.png")
-
-Header = Label(main,image=Banner)
-Header.pack(anchor=NW,)
-
-main.resizable(True,True)
 main.mainloop()
