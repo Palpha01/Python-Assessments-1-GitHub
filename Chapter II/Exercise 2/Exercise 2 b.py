@@ -12,7 +12,7 @@ main = Tk()
 main.title('Exercise 2 b')
 
 Frame1 = Frame(main,borderwidth=5,relief="solid").pack(side=LEFT,expand=True,fill='both')
-Frame2 = Frame(main,borderwidth=5,relief="solid").pack(side=LEFT,expand=True,fill='both')
+Frame2 = Frame(main,borderwidth=5,relief="solid").pack(side=RIGHT,expand=True,fill='both')
 
 A = Label(Frame1,text="A",bg="#22263d",fg="white").pack(side=TOP,expand=True,fill="both")
 B = Label(Frame1,text="B",bg="white",fg="#22263d").pack(side=BOTTOM,expand=True,fill="both")
