@@ -10,25 +10,25 @@
 
 import math
 
-# 1
+# 1: Ceil
 a = 2.3
 ceil = math.ceil(a)
 print(ceil)
 
-# 2
+# 2: floor
 floor = math.floor(a)
 print(floor)
 
-# 3
+# 3: factorial
 a = 5
 factorial = math.factorial(a)
 print(factorial)
 
-# 4
+# 4: Value
 a = 2**3
 print(a)
 
-# 5
+# 5: Squareroot
 a = 16
 sqrt = math.sqrt(a)
 print(a)
