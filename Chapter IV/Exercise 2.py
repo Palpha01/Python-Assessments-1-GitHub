@@ -7,6 +7,6 @@
 # Love
 # Enemy  
 
-file = open("Python-Assessments-1-GitHub/Chapter IV/Sentences.txt","r")
+file = open("Python-Assessments-1-GitHub/Chapter IV/Texts/Sentences.txt","r")
 
 print(file.read())
