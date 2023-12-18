@@ -7,23 +7,6 @@
 # Love
 # Enemy  
 
-import tkinter
+file = open("Python-Assessments-1-GitHub/Chapter IV/Sentences.txt","r")
 
-from tkinter import *
-
-def count_occurences():
-    string = entry.get()
-    with open("Sentences.txt", 'r') as file:
-        content = file.read()
-        count = content.count(string)
-        result.config(text="The string " + string + " appears " + count + " times.")
-
-main = Tk()
-main.title("Exercise 2")
-
-entry = Entry(main, width=30).pack(pady=10)
-search = Button(main, text="Search", command=count_occurences).pack()
-
-result = Label(main, text="").pack(pady=10)
-
-main.mainloop()
+print(file.read())
