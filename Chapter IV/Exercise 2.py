@@ -21,9 +21,8 @@ def count_string_occurrences():
 
 with open("Python-Assessments-1-GitHub/Chapter IV/Texts/Sentences.txt",'r') as file:
     data = file.read()
-    
-occurrences = [data.count(string) for string in target_strings]
 
+occurrences = (data.count(string) for string in target_strings)
 result.config(text="Occurrences: {occurrences}")
 
 main = Tk()

@@ -3,71 +3,82 @@
 # Develop a GUI application using tkinter that allows users to calculate and display the areas of various shapes
 # including circles, squares, and rectangles
 
-# import tkinter
+import tkinter
+from tkinter import *
+from tkinter import ttk,messagebox
 
-# from tkinter import *
+def calculate_area():
+    try:
+        if selected.get() == "Circle":
+            radius = float(radiusentry.get())
+            area = 3.14 * radius**2
+        elif selected.get() == "Square":
+            side = float(sidentry.get())
+            area = side**2
+        elif selected.get() == "Rectangle":
+            length = float(lengthentry.get())
+            width = float(widthentry.get())
+            area = length * width
+        else:
+            messagebox.showerror("That's not a shape...")
+            return
+        
+        resultabel.config(text=f"Area: {area:.2f} square units")
+    except ValueError:
+        messagebox.showerror("Is that a dimension?")
 
-# from math import pi
+main = Tk()
+main.title("Exercise 3")
+main.geometry("300x350")
 
-# def calculate_area():
-#     shape = shape_var.get()
-#     if shape == "circle":
-#         radius = float(Rentry.get())
-#         area = pi * radius ** 2
-#     elif shape == "square":
-#         side = float(Sentry.get())
-#         area = side ** 2
-#     elif shape == "rect":
-#         length = float(Lentry.get())
-#         width = float(Wentry.get())
-#         area = length * width
-#     else:
-#         area = 0
-    
-#     result.config(text="The area of " + shape + " is " + area + " square units")
-    
-# main = Tk()
-# main.title("Exercise 3")
+tab = ttk.Notebook(main)
 
-# frame = Label(main)
-# frame.pack(pady=10)
+circle = Frame(tab)
+square = Frame(tab)
+rectangle = Frame(tab)
 
-# shape_label = Label(frame, text="Choose your shape:")
-# shape_label.grid(row=0,column=0,padx=10,pady=5)
+tab.add(circle,text="Circle")
+tab.add(square,text="Square")
+tab.add(rectangle,text="Rectangle")
 
-# shapes = ["circle", "square", "rect"]
-# shape_var = StringVar()
-# shape_drowp = OptionMenu(frame,shape_var,*shapes)
-# shape_var.set(shapes[0])
-# shape_drowp.grid(row=0,column=1,padx=10,pady=5)
+tab.pack(expand=3,fill=BOTH)
 
-# # Circle
-# Radius = Label(frame,text="Radius: ")
-# Radius.grid(row=1,column=0,padx=10,pady=5)
-# Rentry = Entry(frame)
-# Rentry.grid(row=1,column=1,padx=10,pady=5)
+selected = StringVar(value="Square")
+shabel = Label(main,text="Choose a Shape: ")
+shabel.pack()
+shapelection = ttk.Combobox(main,textvariable=selected,values=["Circle","Square","Rectangle"])
+shapelection.pack()
 
-# # Square
-# Side = Label(frame,text="Side: ")
-# Side.grid(row=2,column=0,padx=10,pady=5)
-# Sentry = Entry(frame)
-# Sentry.grid(row=2,column=1,padx=10,pady=5)
+# This is a circle
 
-# # Rect
-# Length = Label(frame,text="Length: ")
-# Length.grid(row=3,column=0,padx=10,pady=5)
-# Lentry = Entry(frame)
-# Lentry.grid(row=3,column=1,padx=10,pady=5)
+radiusabel = Label(circle,text="Enter Radius: ")
+radiusabel.pack(pady=10)
+radiusentry = Entry(circle)
+radiusentry.pack(pady=10)
 
-# Width = Label(frame,text="Width: ")
-# Width.grid(row=4,column=0,padx=10,pady=5)
-# Wentry = Entry(frame)
-# Wentry.grid(row=4,column=1,padx=10,pady=5)
+# This is a square
 
-# calculate = Button(frame,text="Calculate Area",command=calculate_area)
-# calculate.grid(row=5,column=0,columnspan=2,pady=10)
+sideabel = Label(square,text="Enter the Length of the Side: ")
+sideabel.pack(pady=10)
+sidentry = Entry(square)
+sidentry.pack(pady=10)
 
-# result = Label(main,text="",font=("Helvetica",20))
-# result.pack(pady=20)
+# This is a rectangle
 
-# main.mainloop()
+lengthabel = Label(rectangle,text="Enter the Length: ")
+lengthabel.pack(pady=10)
+lengthentry = Entry(rectangle)
+lengthentry.pack(pady=10)
+
+widthabel = Label(rectangle,text="Enter the Width: ")
+widthabel.pack(pady=10)
+widthentry = Entry(rectangle)
+widthentry.pack(pady=10)
+
+calculate = Button(main,text="Calculate",command=calculate_area)
+calculate.pack(pady=10)
+
+resultabel = Label(main,text="The Area is: ")
+resultabel.pack(pady=10)
+
+main.mainloop()

@@ -4,15 +4,34 @@
 # Extension: Add other features to the previous app such as handling money.
 
 import tkinter
-
 from tkinter import *
+from tkinter import messagebox
 
 main = Tk()
 
 main.title('Exercise 2')
 main.geometry('500x500')
 
-header = Label(main,text="Coffee Vending Machine",font=("Helvetica", 10, "bold"),width=60,bg='brown',bd=10,fg='white',relief=RAISED)
-header.grid(row=0,column=0)
+Greeting = Label(main,text="Welcome to my Coffee Shop!",font=('Helvetica',12,'bold'),bg='#8B4513',fg='chocolate1',width=25,height=5,pady=50)
+Greeting.pack()
+
+coffeetype = ["Cappucchino","Latte","Espresso","Mocha","Americano"]
+coffvar = StringVar(main)
+coffvar.set(coffeetype[0])
+
+dropdown = OptionMenu(main,coffvar,*coffeetype)
+dropdown.pack()
+
+milkar = IntVar(value=0)
+checkbox = Checkbutton(main,text="Add Milk",variable=milkar)
+checkbox.pack()
+
+def order():
+    coffee = coffvar.get()
+    havemilk = "with milk" if milkar.get() == 1 else ""
+    messagebox.showinfo("Enjoy your coffee!", f"You ordered: {coffee} {havemilk}")
+
+orderup = Button(main,text="Order your Coffee",command=order)
+orderup.pack()
 
 main.mainloop()
