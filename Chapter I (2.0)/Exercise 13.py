@@ -2,7 +2,8 @@
 
 # Write a program that passes a list as an argument to a function. The function should then calculate the product (values multiplied) of the list values and return this value back to the main program.
 
-# NumPy, as the name suggests, is for working with numbers in python, for operations like multiplication
+# NumPy, as the name suggests, is for working with numbers in python,
+# for operations like multiplication
 
 import numpy
 
