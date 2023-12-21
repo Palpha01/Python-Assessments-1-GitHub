@@ -38,7 +38,7 @@ main = Tk()
 
 main.geometry('500x500')
 
-main.title('Temperature Converter')
+main.title('Bonus A')
 
 main.grid_columnconfigure(1, weight = 1)
 main.grid_rowconfigure(1, weight = 1)
