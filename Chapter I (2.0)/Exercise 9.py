@@ -28,12 +28,10 @@ print ("This list is ascended", ascend)
 ten.sort(reverse=True)
 print ("This list is descended", ten)
 
-# Append two elements (Note: This is my favorite part)
-
-countries = ["Philippines, Ireland, Poland, Netherlands, United States"]
-countries.append ("Japan")
-countries.append ("Lithuania")
+# Append two elements
+ten.append (110)
+ten.append (120)
 
 # Print the list after appending
 
-print(countries)
+print(ten)
