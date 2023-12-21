@@ -7,7 +7,8 @@ a = int(input("a = "))
 b = int(input("b = "))
 c = int(input("c = "))
 
-# And just like the last time, we compare them using the if-else method, this time with elif to see the results
+# And just like the last time, we compare them using the if-else method
+# this time with elif to see the results
 if (a>b) and (a>c):
     print("a has the largest number.")
 elif (b>a) and (b>c):
