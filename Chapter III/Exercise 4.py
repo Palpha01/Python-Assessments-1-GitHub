@@ -6,35 +6,46 @@
 
 import tkinter
 from tkinter import *
+from tkinter import ttk, messagebox
+
+def draw_shape():
+    try:
+        selected = shapeselection.get()
+        coordinates = coordinatentry.get()
+        coordinatelist = [int(coord.strip()) for coord in coordinates.split(',')]
+
+        if selected == "Star":
+            canvas.create_polygon(coordinatelist,outline='gold')
+        elif selected == "Square":
+            canvas.create_rectangle(coordinatelist,outline='blue')
+        elif selected == "Circle":
+            canvas.create_oval(coordinatelist,outline='red')
+        elif selected == "Triangle":
+            canvas.create_polygon(coordinatelist,outline='green')
+        else:
+            messagebox.showerror("Nope","Please choose a valid shape")
+            return
+    except ValueError:
+        messagebox.showerror("Where are you going?","Please enter valid coordinates")
 
 main = Tk()
 main.title("Exercise 4")
-main.geometry("500x700")
+main.geometry("1000x1000")
 
-def draw_triangle(event):
-    x1, y1 = event.x, event.y
-    triangle = canvas.create_polygon([x1, y1, x1 + 100, y1 + 100, x1 + 50, y1 + 50])
-canvas = Canvas(main,width=500,height=500)
+canvas = Canvas(main,width=500,height=500,bg='white')
 canvas.pack()
 
-def draw_oval(event):
-    x1, y1 = event.x, event.y
-    oval = canvas.create_oval(x1, y1, x1 + 100, y1 + 100)
+shapabel = Label(main,text="Select Shape:")
+shapabel.pack()
+shapeselection = ttk.Combobox(main, values=["Star","Square","Circle","Triangle"])
+shapeselection.pack()
 
-oval_button = Button(main,text="Draw Oval",command=draw_oval)
-oval_button.pack()
+coordinatabel = Label(main,text="Enter Coordinates (comma-separated):")
+coordinatabel.pack()
+coordinatentry = Entry(main)
+coordinatentry.pack()
 
-def draw_rectangle(event):
-    x1, y1 = event.x, event.y
-    rectangle = canvas.create_rectangle(x1, y1, x1 + 100, y1 + 100)
-
-rectangle_button = Button(main,text="Draw Rectangle",command=draw_rectangle)
-rectangle_button.pack()
-
-square_button = Button(main,text="Draw Square",command=draw_square)
-square_button.pack()
-
-triangle_button = Button(main,text="Draw Triangle",command=draw_triangle)
-triangle_button.pack()
+draw = Button(main,text="Draw",command=draw_shape)
+draw.pack(pady=10)
 
 main.mainloop()
