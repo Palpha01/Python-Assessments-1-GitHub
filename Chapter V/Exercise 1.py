@@ -18,7 +18,7 @@ older_dog = dog1 if dog1.age > dog2.age else dog2
 class DogGUI(tk.Tk):
     def __init__(Palpha):
         super().__init__()
-        Palpha.title("Dog Info")
+        Palpha.title("Exercise 1")
         Palpha.geometry("400x400")
         Palpha.display_dog_info()
         
@@ -32,9 +32,9 @@ class DogGUI(tk.Tk):
         woof_button = tk.Button(Palpha, text="Make Woof", command=Palpha.make_woof)
         woof_button.pack()
         
-    def make_woof(self):
+    def make_woof(Palpha):
         result = older_dog.woof()
-        woof_label = tk.Label(self, text=result)
+        woof_label = tk.Label(Palpha, text=result)
         woof_label.pack()
 
 app = DogGUI()
