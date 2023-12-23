@@ -1,4 +1,4 @@
-# Exercise 5: Playing around in class ☑️
+# Exercise 5: Playing around in class
 
 # Use this exercise to play around with creating and accessing class members and methods.
 # Develop a GUI using Tkinter to Create a class called Animal
