@@ -5,6 +5,7 @@
 
 import tkinter
 from tkinter import *
+from PIL import Image, ImageTk
 from tkinter import messagebox
 
 main = Tk()
@@ -12,7 +13,12 @@ main = Tk()
 main.title('Exercise 2')
 main.geometry('500x500')
 
-Greeting = Label(main,text="Welcome to my Coffee Shop!",font=('Helvetica',12,'bold'),bg='#8B4513',fg='chocolate1',width=25,height=5,pady=50)
+Background = ImageTk.PhotoImage(Image.open("Chapter III/Coffee background.png"))
+
+bg = Label(main,image=Background)
+bg.place(x=0,y=0)
+
+Greeting = Label(main,text="Welcome to my Coffee Shop!",font=('Helvetica',12,'bold'),bg='#8B4513',fg='chocolate1',width=25,height=5,pady=25)
 Greeting.pack()
 
 coffeetype = ["Cappucchino","Latte","Espresso","Mocha","Americano"]
