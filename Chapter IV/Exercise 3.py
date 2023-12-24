@@ -6,7 +6,7 @@
 def read_numbers(data_path):
     
     try:
-        with open("Python-Assessments-1-GitHub/Chapter IV/Texts/Numbers.txt","r") as file:
+        with open("Chapter IV/Texts/Numbers.txt","r") as file:
             noombers = [int(line.strip()) for line in file]
         return noombers
     except FileNotFoundError:
@@ -16,7 +16,7 @@ def read_numbers(data_path):
         print("Error: {e}. the file '{data_path}' contains non-integer values.")
         
 if __name__ == "__main__":
-    data_path = "Python-Assessments-1-GitHub/Chapter IV/Texts/Numbers.txt"
+    data_path = "Chapter IV/Texts/Numbers.txt"
     
     noomberlist = read_numbers(data_path)
     

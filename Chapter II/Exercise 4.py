@@ -10,7 +10,7 @@ import os
 main = Tk()
 main.title("Exercise 4")
 
-Banner = ImageTk.PhotoImage(Image.open("Python-Assessments-1-GitHub/Chapter II/RAK_Bathspa.jpg"))
+Banner = ImageTk.PhotoImage(Image.open("Chapter II/RAK_Bathspa.jpg"))
 
 Heading = Label(main,image=Banner,bg="#22263d")
 Heading.pack(side=TOP,fill=BOTH,expand=NO)

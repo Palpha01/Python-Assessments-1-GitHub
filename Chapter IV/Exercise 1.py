@@ -33,10 +33,10 @@ class UserInfoApp:
             value = entry.get()
             user_info += "{field}: {value}"
             
-        with open("Python-Assessments-1-GitHub/Chapter IV/Texts/Bio.txt",'w') as file:
+        with open("Chapter IV/Texts/Bio.txt",'w') as file:
             file.write(user_info)
         
-        with open("Python-Assessments-1-GitHub/Chapter IV/Texts/Bio.txt",'r') as file:
+        with open("Chapter IV/Texts/Bio.txt",'r') as file:
             user_info = file.read()
             messagebox.showinfo("User Information",user_info)
 

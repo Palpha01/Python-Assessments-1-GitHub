@@ -19,7 +19,7 @@ def count_string_occurrences():
         "Enemy"
     ]
 
-with open("Python-Assessments-1-GitHub/Chapter IV/Texts/Sentences.txt",'r') as file:
+with open("Chapter IV/Texts/Sentences.txt",'r') as file:
     data = file.read()
 
 occurrences = (data.count(string) for string in target_strings)

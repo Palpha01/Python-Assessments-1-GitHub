@@ -21,13 +21,13 @@ def read_file(mail_path):
 def show_letter_count():
     letter = mail.get()
     if not letter:
-        messagebox.showinfo("Error", "Where is the letter for your mail?")
+        messagebox.showinfo("Error","Where is the letter for your mail?")
         return
 
-    file_content = read_file('Python-Assessments-1-GitHub/Chapter IV/Texts/Sentences.txt')
+    file_content = read_file('Chapter IV/Texts/Sentences.txt')
     
     if file_content is None:
-        messagebox.showinfo("Error", "File 'Python-Assessments-1-GitHub/Chapter IV/Texts/Sentences.txt' is not found.")
+        messagebox.showinfo("Error","File 'Chapter IV/Texts/Sentences.txt' is not found.")
     
     occurences = counting_letter_occurences(letter,file_content)
     resultabel.config(text=f"Occurences of '{letter}': {occurences}")
